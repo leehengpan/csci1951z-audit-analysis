@@ -20,7 +20,7 @@ def data_generator(config_file, num_rows):
         if key not in ("GPA", "job_histories"):
             results[key] = randomizer(val, size=num_rows)
         if key == "GPA":
-            results[key] = np.round(np.clip(randomizer(func=np.random.normal, loc=3, scale=2, size=num_rows), 0, 4), 2)
+            results[key] = np.round(np.clip(randomizer(func=np.random.normal, loc=3, scale=1, size=num_rows), 0, 4), 2)
         if key == "job_histories":
             results["jobref_id"] = randomizer(init_arr=list(val.keys()), size=num_rows)
             jobref_df = pd.DataFrame.from_dict(initializers["job_histories"], orient="index")
