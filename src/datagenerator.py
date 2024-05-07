@@ -16,13 +16,13 @@ def data_generator(config_file, num_rows):
     with open(config_file) as f:
         initializers = json.load(f)
 
-    for key, val in initializers.items():
+    for i, (key, val) in enumerate(initializers.items()):
         if key not in ("GPA", "job_histories"):
-            results[key] = randomizer(val, size=num_rows)
+            results[key] = randomizer(val, size=num_rows, seed=i)
         if key == "GPA":
-            results[key] = np.round(np.clip(randomizer(func=np.random.normal, loc=3, scale=1, size=num_rows), 0, 4), 2)
+            results[key] = np.round(np.clip(randomizer(func=np.random.normal, loc=3, scale=1, size=num_rows, seed=i), 0, 4), 2)
         if key == "job_histories":
-            results["jobref_id"] = randomizer(init_arr=list(val.keys()), size=num_rows)
+            results["jobref_id"] = randomizer(init_arr=list(val.keys()), size=num_rows, seed=i)
             jobref_df = pd.DataFrame.from_dict(initializers["job_histories"], orient="index")
             jobref_df.columns = ["Role 1", "Start 1", "End 1", "Role 2", "Start 2", "End 2", "Role 3", "Start 3",
                                  "End 3"]
