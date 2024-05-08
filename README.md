@@ -21,6 +21,7 @@ Here's a brief overview of the structure of this repo:
 `src/`- contains short scripts that we wrote to simplify the creation of a synthetic dataset
 `data/`- contains the synthetic dataset created in the notebook `dataprep-flow.ipynb`.
 `plots/`- contains all plots we have created through our analysis as in the notebook `audit-analysis.ipynb`.
+`environment.yml`- A yml file of the conda environment configuration used in this project.
 
 
 ----- xxxxx ------
