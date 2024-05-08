@@ -19,8 +19,11 @@ Here's a brief overview of the structure of this repo:
 `dataprep-flow.ipynb`- is a series of short code snippets organized to make the process of creating the synthetic dataset. Run this file only if you wish to refresh the dataset we have created. Note that, this may cause some discrepancies from the values we report.
 
 `src/`- contains short scripts that we wrote to simplify the creation of a synthetic dataset
+
 `data/`- contains the synthetic dataset created in the notebook `dataprep-flow.ipynb`.
+
 `plots/`- contains all plots we have created through our analysis as in the notebook `audit-analysis.ipynb`.
+
 `environment.yml`- A yml file of the conda environment configuration used in this project.
 
 
