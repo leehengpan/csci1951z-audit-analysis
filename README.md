@@ -3,9 +3,12 @@
 In this project, we play the role of an auditing team placed by EEOC to investigate Bold Bank's hiring practices. Bold Bank is a financial institution that has recently implemented a new hiring system developed by Providence Analytica to streamline its recruitment process. The purpose of this audit is to investigate complaints that allege discriminatory outcomes in the new hiring process. Through our analysis, we hope to ascertain that the candidate selection process is not plagued by discriminatory outcomes because of a person's race, color, religion, sex, national origin, age, and disability.
 
 To conduct our review, we will rely on a combination of stakeholder interviews-- job applicant, Providence Analytica, and Bold Bank representatives-- and automated flows to probe the resume scorer and candidate evaluator models. At a high level, the hiring system consists of two phases: 
-
-    1. A resume scoring model that assigns a score of 0 to 10 to a CSV-formatted resume, indicating the candidate's suitability for a specific role
+	1. A resume scoring model that assigns a score of 0 to 10 to a CSV-formatted resume, indicating the candidate's suitability for a specific role
     2. A candidate evaluator model customized to the company's preferences, utilizes the resume scores to generate a binary outcome for whether the candidate should receive an interview.
+
+
+----- xxxxx ------
+
 
 Here's a brief overview of the structure of this repo:
 
@@ -20,3 +23,6 @@ Here's a brief overview of the structure of this repo:
 `plots/`- contains all plots we have created through our analysis as in the notebook `audit-analysis.ipynb`.
 
 
+----- xxxxx ------
+
+Make sure to refer to `environment.yml` file to resolve any dependency issues.
